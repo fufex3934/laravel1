@@ -7,8 +7,9 @@
     <ul>
     @foreach ($fufas as $fufa)
     <li>
-        <p>{{$fufa['name']}}</p>
-        <a href="/fufas/{{$fufa['id']}}">View Details</a>
+       <x-card href="/fufas/{{$fufa['id']}}" :highlight="$fufa['skill']>70">
+        <h3>{{$fufa['name']}}</h3>
+       </x-card>
     </li>
         
     @endforeach
