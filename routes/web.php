@@ -15,6 +15,10 @@ Route::get('/fufas', function () {
 });
 
 
+Route::get('/fufas/create', function () {
+    return view('fufas.create');
+});
+
 Route::get('/fufas/{id}', function ($id) {
 
     return view('fufas.show', ["id" => $id]);

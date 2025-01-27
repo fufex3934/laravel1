@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>fufa Network | Home</title>
-</head>
-<body>
+
+<x-layout>
     <h2>Currently Available Fufas</h2>
     @if ($greeting =="Hello")
     <p>Hi form inside the if statement</p>
@@ -19,5 +13,4 @@
         
     @endforeach
     </ul>
-</body>
-</html>
+</x-layout>
