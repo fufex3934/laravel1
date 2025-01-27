@@ -13,3 +13,9 @@ Route::get('/fufas', function () {
     ];
     return view('fufas.index', ["greeting" => "Hello", "fufas" => $fufas]);
 });
+
+
+Route::get('/fufas/{id}', function ($id) {
+
+    return view('fufas.show', ["id" => $id]);
+});
