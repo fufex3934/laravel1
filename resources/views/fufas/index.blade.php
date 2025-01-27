@@ -7,8 +7,16 @@
 </head>
 <body>
     <h2>Currently Available Fufas</h2>
+    <p>{{ $greeting}}</p>
     <ul>
-        <li>Fufas Here</li>
+    <li>   <a href="">
+        {{$fufas[0]["name"]}}
+       </a>
+    </li>
+    <li>   <a href="">
+        {{$fufas[1]["name"]}}
+       </a>
+    </li>
     </ul>
 </body>
 </html>
