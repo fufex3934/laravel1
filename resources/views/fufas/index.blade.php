@@ -7,16 +7,17 @@
 </head>
 <body>
     <h2>Currently Available Fufas</h2>
-    <p>{{ $greeting}}</p>
+    @if ($greeting =="Hello")
+    <p>Hi form inside the if statement</p>
+    @endif
     <ul>
-    <li>   <a href="/fufas/{{$fufas[0]["id"]}}">
-        {{$fufas[0]["name"]}}
-       </a>
+    @foreach ($fufas as $fufa)
+    <li>
+        <p>{{$fufa['name']}}</p>
+        <a href="/fufas/{{$fufa['id']}}">View Details</a>
     </li>
-    <li>   <a href="/fufas/{{$fufas[1]["id"]}}">
-        {{$fufas[1]["name"]}}
-       </a>
-    </li>
+        
+    @endforeach
     </ul>
 </body>
 </html>
