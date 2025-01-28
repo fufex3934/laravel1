@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('fufas', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name');
+            $table->integer('skill');
+            $table->text('bio');
         });
     }
 
