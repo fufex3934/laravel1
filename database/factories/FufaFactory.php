@@ -17,7 +17,9 @@ class FufaFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name'=>fake()->name(),
+            'bio'=>fake()->realText(500),
+            'skill'=>fake()->numberBetween(0,100)
         ];
     }
 }
