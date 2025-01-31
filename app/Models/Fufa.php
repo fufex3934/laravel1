@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Fufa extends Model
 {
-    protected $fillable = ['name','skill','bio'];
+    protected $fillable = ['name','skill','bio','dojo_id'];
     /** @use HasFactory<\Database\Factories\FufaFactory> */
     use HasFactory;
 
