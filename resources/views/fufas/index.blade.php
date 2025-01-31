@@ -1,9 +1,7 @@
 
 <x-layout>
     <h2>Currently Available Fufas</h2>
-    {{-- @if ($greeting =="Hello")
-    <p>Hi form inside the if statement</p>
-    @endif --}}
+    
     <ul>
     @foreach ($fufas as $fufa)
     <li>
@@ -14,4 +12,6 @@
         
     @endforeach
     </ul>
+
+    {{$fufas->links()}}
 </x-layout>

@@ -9,7 +9,7 @@ class FufaController extends Controller
 {
     public function index()
     {
-        $fufas = Fufa::orderBy('created_at', 'desc')->get();
+        $fufas = Fufa::orderBy('created_at', 'desc')->paginate(10);
         return view('fufas.index', ["fufas" => $fufas]);
     }
     public function show($id)
