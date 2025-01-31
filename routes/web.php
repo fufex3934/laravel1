@@ -16,3 +16,4 @@ Route::get('/fufas/{id}', [FufaController::class, 'show'])->name('fufas.show');
 
 
 Route::post('/fufas',[FufaController::class, 'store'])->name('fufas.store');
+Route::delete('/fufas/{id}', [FufaController::class, 'destroy'])->name('fufas.destroy');

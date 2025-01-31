@@ -38,5 +38,9 @@ class FufaController extends Controller
         return redirect()->route('fufas.index')->with('success', 'Fufa created successfully');
     }
 
-    public function destroy($id) {}
+    public function destroy($id) {
+        $fufa = Fufa::findOrFail($id);
+        $fufa->delete();
+        return redirect()->route('fufas.index')->with('success', 'Fufa deleted successfully');
+    }
 }

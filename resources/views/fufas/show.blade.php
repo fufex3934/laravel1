@@ -13,4 +13,9 @@
         <p><strong>Location:</strong>{{$fufa->dojo->location}}</p>
         <p><strong>About the Dojo:</strong>{{$fufa->dojo->description}}</p>
     </div>
+    <form action="{{route('fufas.destroy',$fufa->id)}}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn my-4">Delete Fufa</button>
+    </form>
 </x-layout>
