@@ -13,9 +13,9 @@ class FufaController extends Controller
         $fufas = Fufa::with('dojo')->orderBy('created_at', 'desc')->paginate(10);
         return view('fufas.index', ["fufas" => $fufas]);
     }
-    public function show($id)
+    public function show(Fufa $fufa)
     {
-        $fufa = Fufa::with('dojo')->findOrFail($id);
+        $fufa->load('dojo');
         return view('fufas.show', ["fufa" => $fufa]);
     }
 
@@ -38,8 +38,8 @@ class FufaController extends Controller
         return redirect()->route('fufas.index')->with('success', 'Fufa created successfully');
     }
 
-    public function destroy($id) {
-        $fufa = Fufa::findOrFail($id);
+    public function destroy(Fufa $fufa) {
+        
         $fufa->delete();
         return redirect()->route('fufas.index')->with('success', 'Fufa deleted successfully');
     }

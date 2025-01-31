@@ -7,6 +7,11 @@
     @vite('resources/css/app.css')
 </head>
 <body>
+    @if(session('success'))
+    <div class="p-4 text-center bg-green-50 text-green-500 font-bold">
+        {{session('success')}}
+    </div>
+    @endif
     <header>
         <nav>
             <h1>Fufa Network</h1>
