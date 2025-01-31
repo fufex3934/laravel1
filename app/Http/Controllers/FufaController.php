@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Fufa;
+use App\Models\Dojo;
 use Illuminate\Http\Request;
 
 class FufaController extends Controller
@@ -20,7 +21,8 @@ class FufaController extends Controller
 
     public function create()
     {
-        return view('fufas.create');
+        $dojos = Dojo::all();
+        return view('fufas.create', ['dojos' => $dojos]);
     }
 
     public function store() {}
