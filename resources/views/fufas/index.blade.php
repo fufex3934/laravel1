@@ -1,5 +1,7 @@
 
 <x-layout>
+   
+
     <h2>Currently Available Fufas</h2>
     
     <ul>

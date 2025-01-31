@@ -1,5 +1,5 @@
 <x-layout>
-    <h2>Create Page</h2>
+    
     <form action="{{route('fufas.store')}}" method="POST">
         @csrf
         <h2>Create a New Ninja</h2>
