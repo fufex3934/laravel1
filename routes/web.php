@@ -1,25 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FufaController;
 
-Route::get('/', function () {
+Route::get('/', [function () {
     return view('welcome');
-});
+}]);
 
-Route::get('/fufas', function () {
-    $fufas = [
-        ["name" => "mario", "skill" => 75, "id" => "1"],
-        ["name" => "luigi", "skill" => 45, "id" => "2"],
-    ];
-    return view('fufas.index', ["greeting" => "Hello", "fufas" => $fufas]);
-});
+Route::get('/fufas', [FufaController::class, 'index']);
 
 
-Route::get('/fufas/create', function () {
-    return view('fufas.create');
-});
+Route::get('/fufas/create', [FufaController::class, 'create']);
 
-Route::get('/fufas/{id}', function ($id) {
-
-    return view('fufas.show', ["id" => $id]);
-});
+Route::get('/fufas/{id}', [FufaController::class, 'show']);
