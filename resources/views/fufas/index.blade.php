@@ -7,7 +7,7 @@
     <ul>
     @foreach ($fufas as $fufa)
     <li>
-       <x-card href="/fufas/{{$fufa->id}}" :highlight="$fufa->skill>70">
+       <x-card href="{{route('fufas.show',$fufa->id)}}" :highlight="$fufa->skill>70">
         <h3>{{$fufa->name}}</h3>
        </x-card>
     </li>

@@ -10,8 +10,8 @@
     <header>
         <nav>
             <h1>Fufa Network</h1>
-            <a href="/fufas">All Fufas</a>
-            <a href="/fufas/create">Create New Fufa</a>
+            <a href="{{route('fufas.index')}}">All Fufas</a>
+            <a href="{{route('fufas.create')}}">Create New Fufa</a>
         </nav>
     </header>
     <main class="container">
