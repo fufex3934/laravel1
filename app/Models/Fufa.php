@@ -10,4 +10,8 @@ class Fufa extends Model
     protected $fillable = ['name','skill','bio'];
     /** @use HasFactory<\Database\Factories\FufaFactory> */
     use HasFactory;
+
+    public function dojo(){
+        return $this->belongsTo(Dojo::class);
+    }
 }

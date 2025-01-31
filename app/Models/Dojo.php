@@ -10,4 +10,8 @@ class Dojo extends Model
     /** @use HasFactory<\Database\Factories\DojoFactory> */
     protected $fillable = ['name','location','description'];
     use HasFactory;
+
+    public function fufas(){
+        return $this->hasMany(Fufa::class);
+    }
 }

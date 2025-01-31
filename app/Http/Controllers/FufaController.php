@@ -9,12 +9,12 @@ class FufaController extends Controller
 {
     public function index()
     {
-        $fufas = Fufa::orderBy('created_at', 'desc')->paginate(10);
+        $fufas = Fufa::with('dojo')->orderBy('created_at', 'desc')->paginate(10);
         return view('fufas.index', ["fufas" => $fufas]);
     }
     public function show($id)
     {
-        $fufa = Fufa::findOrFail($id);
+        $fufa = Fufa::with('dojo')->findOrFail($id);
         return view('fufas.show', ["fufa" => $fufa]);
     }
 
